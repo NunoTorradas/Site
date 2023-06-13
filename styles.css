@@ -1,109 +1,120 @@
-.menu {
-  list-style-type: none;
+/* styles.css */
+
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #333;
+}
+
+.container {
+  min-height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu {
+  background-color: #333;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
 }
 
 .menu li {
   display: inline-block;
+  margin-right: 10px;
 }
 
 .menu li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+  color: #fff;
   text-decoration: none;
-}
-
-.menu li a:hover {
-  background-color: #111;
-}
-
-.larger-text {
-  font-size: 24px;
+  padding: 5px;
 }
 
 .center-text {
   text-align: center;
 }
 
+.larger-text {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
 .question-container {
-  max-width: 600px;
-  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .question {
-  background-color: #f2f2f2;
+  background-color: #f1f1f1;
   padding: 10px;
   margin-bottom: 10px;
-  cursor: pointer;
+  border-radius: 5px;
 }
 
 .question-title {
-  margin: 0;
+  margin-top: 0;
 }
 
 .answer {
   display: none;
+  padding-top: 10px;
 }
 
 .toggle-button {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-top: 2px solid #333;
-  border-right: 2px solid #333;
-  transform: rotate(45deg);
-  transition: transform 0.3s ease-in-out;
-  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.toggle-button::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 5px auto;
 }
 
 .question.active .answer {
   display: block;
 }
 
-.question.active .toggle-button {
-  transform: rotate(135deg);
+.image-text-container {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes moveRisco {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: calc(100% - 10px);
-  }
+.image-container {
+  margin-right: 20px;
 }
 
-body {
-  position: relative;
-  overflow: hidden;
+.image-container img {
+  width: 200px;
+  height: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.risco {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 2px;
-  background-color: black;
-  animation: moveRisco 5s linear infinite;
+.text-container {
+  flex: 1;
 }
-
-@keyframes moveRisco {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: calc(100% - 10px);
-  }
+.larger-text {
+  font-size: 25px;
+  line-height: 2;
 }
-
-
-
+.larger-text1 {
+  font-size: 20px;
+  line-height: 2;
+}
