@@ -1,13 +1,18 @@
-/* styles.css */
+html,
+body {
+  min-height: 100%;
+  font-family: 'Bradley Hand', cursive;
 
-html, body {
+}
+
+body {
+  min-height: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
 .container {
-  min-height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -17,10 +22,37 @@ html, body {
 }
 
 .footer {
-  background-color: #f1f1f1;
-  padding: 20px;
+  position: relative;
+  bottom: 0;
+  background-color: #333;
+  color: #FFF;
+  width: 100%;
   text-align: center;
+  margin-top: auto;
+  font-size: 20px;
 }
+
+.footer1 {
+  position: absolute;
+  bottom: 0;
+  background-color: #333;
+  color: #FFF;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+  font-size: 20px;
+}
+.footer2 {
+  position: absolute;
+  bottom:  0 auto;
+  background-color: #333;
+  color: #FFF;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+  font-size: 20px;
+}
+
 .menu {
   position: fixed;
   top: -20px;
@@ -29,7 +61,7 @@ html, body {
   background-color: #333;
   padding: 10px;
   text-align: center;
-  z-index: 9999; /* Certifique-se de que o menu esteja acima de outros elementos */
+  z-index: 9999;
 }
 
 .menu li {
@@ -47,25 +79,12 @@ html, body {
   text-align: center;
 }
 
-.larger-text {
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-.question-container {
-  margin-top: 20px;
-}
-
 .question {
   background-color: #f1f1f1;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
   position: relative;
-}
-
-.question-title {
-  margin-top: 0;
 }
 
 .answer {
@@ -76,6 +95,10 @@ html, body {
   margin-bottom: 5px;
   border-radius: 5px;
   position: relative;
+}
+
+.answer.show {
+  display: block;
 }
 
 .toggle-button {
@@ -98,9 +121,8 @@ html, body {
   display: block;
 }
 
-
-
 .image-text-container {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -118,22 +140,136 @@ html, body {
 .text-container {
   flex: 1;
 }
+
 .larger-text {
-  font-size: 25px;
+  font-size: 30px;
   line-height: 3;
 }
+
 .larger-text1 {
-  font-size: 20px;
-  line-height: 2;
-}
-@media screen and (max-width: 768px) {
-  /* Estilos para telas com largura máxima de 768px (ex: smartphones) */
+  font-size: 25px;
+  line-height: 1.5;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Estilos para telas com largura entre 769px e 1024px (ex: tablets) */
+.pesquisa-centrada {
+  padding-top: 5%;
 }
 
-@media screen and (min-width: 1025px) {
-  /* Estilos para telas com largura mínima de 1025px (ex: desktops) */
+.btn {
+  text-decoration: none;
+  padding: 10px 40px;
+  border-radius: 100px;
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #777;
+  font-weight: bold;
+  font-size: 30px;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 100px; /* Adicionado espaçamento para o rodapé */
+  box-sizing: border-box;
+}
+
+.image-container {
+  padding-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.image-container img {
+  width: auto;
+  height: auto;
+  max-height: 70vh;
+  max-width: 40vw; /* Adicionado para limitar a largura máxima da imagem */
+  object-fit: contain;
+}
+
+.left-image {
+  max-height: 50vh; /* Adicionado para limitar a altura máxima da imagem */
+}
+
+.right-image {
+  max-height: 50vh; /* Adicionado para limitar a altura máxima da imagem */
+}
+
+.text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  overflow: auto; /* Adicionado para criar uma barra de rolagem quando o texto ultrapassar o limite */
+}
+
+.text-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .image-text-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+  }
+
+  .image-container img {
+    width: 80%;
+    max-width: 300px;
+  }
+  
+  .left-image,
+  .right-image {
+    position: static;
+    margin-bottom: 20px;
+    transform: none;
+    max-height: none;
+  }
+  
+  .text-container {
+    padding: 20px 10px;
+  }
+  
+  .text-container h2 {
+    font-size: 20px;
+  }
+  
+  .text-container p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .footer3 {
+    position: relative;
+    margin-top: auto;
+    bottom: 0;
+    background-color: #333;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+
+  }
 }

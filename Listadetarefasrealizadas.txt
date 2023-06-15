@@ -1,0 +1,8 @@
+1º passo : Criar os ficheiros com extensão .html assim como o .css
+2º passo : Adicionar informação aos ficheiros .html (Titulos, Textos, imagens, Documentos) 
+3º passo : Criar o menu/rodapé para todas a páginas
+4º passo : Adicionar os botões necessários 
+5º passo : Formatar os textos/imagens/botões no .css
+6º passo : Adicionar uma API
+7º passo : Organizar as pastas de acordo
+8º passo : Criar este ficheiro
